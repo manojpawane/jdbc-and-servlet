@@ -1,200 +1,195 @@
 <html>
 
-  <head>
+<head>
 
-  <script type="text/javascript" src="validate.js"></script>
 
-  </head>
 
-  <body>
+</head>
 
-  <form action="#" name="StudentRegistration" onSubmit="return(validate());">
+<body>
 
 
-<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
+	<form action="registers" method="post">
 
-  cellspacing="2">
 
-<tr>
 
-  <td colspan=2>
+		<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
+			cellspacing="2">
 
-  <center><font size=4><b>Student Registration Form</b></font></center>
+			<tr>
 
-  </td>
+				<td colspan=2>
 
-  </tr>
+					<center>
+						<font size=4><b>Registration Form</b></font>
+					</center>
 
-<tr>
+				</td>
 
-  <td>Name</td>
+			</tr>
 
-  <td><input type=text name=textnames id="textname" size="30"></td>
+			<tr>
 
-  </tr>
+				<td>Name</td>
 
-<tr>
+				<td><input type=text name=textnames id="textname" size="30"></td>
 
-  <td>Father Name</td>
+			</tr>
 
-  <td><input type="text" name="fathername" id="fathername"
+			<tr>
 
-  size="30"></td>
+				<td>Father Name</td>
 
-  </tr>
+				<td><input type="text" name="fathername" id="fathername"
+					size="30"></td>
 
-  <tr>
+			</tr>
 
-  <td>Postal Address</td>
+		<tr>
 
-  <td><input type="text" name="paddress" id="paddress" size="30"></td>
+				<td>User Name</td>
 
-  </tr>
+				<td><input type="text" name="uname" id="uname" size="30"></td>
 
-<tr>
+			</tr>
+			
+			<tr>
 
-  <td>Personal Address</td>
+				<td>Password</td>
 
-  <td><input type="text" name="personaladdress"
+				<td><input type="text" name="password" id="password" size="30"></td>
 
-  id="personaladdress" size="30"></td>
+			</tr>
+			
+					
 
-  </tr>
+			<tr>
 
-<tr>
+				<td>Postal Address</td>
 
-  <td>Sex</td>
+				<td><input type="text" name="paddress" id="paddress" size="30"></td>
 
-  <td><input type="radio" name="sex" value="male" size="10">Male
+			</tr>
 
-  <input type="radio" name="sex" value="Female" size="10">Female</td>
 
-  </tr>
+			<tr>
 
-<tr>
+				<td>Gender</td>
 
-  <td>City</td>
+				<td><input type="radio" name="gender" value="male" size="10">Male
 
-  <td><select name="City">
+					<input type="radio" name="gender" value="Female" size="10">Female</td>
 
-  <option value="-1" selected>select..</option>
+			</tr>
 
-  <option value="New Delhi">NEW DELHI</option>
 
-  <option value="Mumbai">MUMBAI</option>
 
-  <option value="Goa">GOA</option>
+			<tr>
 
-  <option value="Patna">PATNA</option>
+				<td>Course</td>
 
-  </select></td>
+				<td><select name="course">
 
-  </tr>
+						<option value="-1" selected>select..</option>
 
-<tr>
+						<option value="BE">BE</option>
 
-  <td>Course</td>
+						<option value="MCA">MCA</option>
 
-  <td><select name="Course">
+						<option value="MBA">MBA</option>
 
-  <option value="-1" selected>select..</option>
+						<option value="BCA">BCA</option>
 
-  <option value="B.Tech">B.TECH</option>
+				</select></td>
 
-  <option value="MCA">MCA</option>
+			</tr>
 
-  <option value="MBA">MBA</option>
+			<tr>
 
-  <option value="BCA">BCA</option>
+				<td>District</td>
 
-  </select></td>
+				<td><select name="district">
 
-  </tr>
+						<option value="-1" selected>select..</option>
 
-<tr>
+						<option value="Mumbai">Mumbai</option>
 
-  <td>District</td>
+						<option value="Pune">Pune</option>
 
-  <td><select name="District">
+						<option value="Hyderabad">Hyderabad</option>
 
-  <option value="-1" selected>select..</option>
+						<option value="Banglore">Banglore</option>
 
-  <option value="Nalanda">NALANDA</option>
+				</select></td>
 
-  <option value="UP">UP</option>
+			</tr>
 
-  <option value="Goa">GOA</option>
+			<tr>
 
-  <option value="Patna">PATNA</option>
+				<td>State</td>
 
-  </select></td>
+				<td><select Name="state">
 
-</tr>
+						<option value="-1" selected>select..</option>
 
-<tr>
+						<option value="Maharashtra">Maharashtra</option>
 
-  <td>State</td>
+						<option value="AP">AP</option>
 
-  <td><select Name="State">
+						<option value="Goa">GOA</option>
 
-  <option value="-1" selected>select..</option>
+						<option value="Karnataka">Karnataka</option>
 
-  <option value="New Delhi">NEW DELHI</option>
+				</select></td>
 
-  <option value="Mumbai">MUMBAI</option>
+			</tr>
 
-  <option value="Goa">GOA</option>
+			<tr>
 
-  <option value="Bihar">BIHAR</option>
+				<td>PinCode</td>
 
-  </select></td>
+				<td><input type="text" name="pincode" id="pincode" size="30"></td>
 
-  </tr>
+			</tr>
 
-  <tr>
+			<tr>
 
-  <td>PinCode</td>
+				<td>EmailId</td>
 
-  <td><input type="text" name="pincode" id="pincode" size="30"></td>
+				<td><input type="text" name="emailid" id="emailid" size="30"></td>
 
-</tr>
+			</tr>
 
-  <tr>
+			<tr>
 
-  <td>EmailId</td>
+				<td>DOB</td>
 
-  <td><input type="text" name="emailid" id="emailid" size="30"></td>
+				<td><input type="text" name="dob" id="dob" size="30"></td>
 
-  </tr>
+			</tr>
 
-<tr>
+			<tr>
 
-  <td>DOB</td>
+				<td>MobileNo</td>
 
-  <td><input type="text" name="dob" id="dob" size="30"></td>
+				<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
 
-  </tr>
+			</tr>
 
-<tr>
+			<tr>
 
-  <td>MobileNo</td>
+				<td colspan="2"><center>
+						<input type="reset"><input type="submit" value="Submit" />
+					</center></td>
 
-  <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
 
-  </tr>
 
-  <tr>
+			</tr>
 
-  <td><input type="reset"></td>
+		</table>
 
-  <td colspan="2"><input type="submit" value="Submit Form" /></td>
+	</form>
 
-  </tr>
+</body>
 
-  </table>
-
-  </form>
-
-  </body>
-
-  </html>
+</html>

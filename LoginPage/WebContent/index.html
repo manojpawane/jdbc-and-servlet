@@ -3,15 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+table{
+	margin-top:13%;
+}
+#bt{
+ 
+    margin: auto;}
+</style>
 </head>
-<body>
+<body bgcolor="green">
 
 <form action="hello" method="get">
-Name:<input type="text" name="name"><br>
-Password:<input type="password" name="password"><br>
-<input type="submit" value="Submit">
-<a href="registration.html">signup</a>
+<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center" cellspacing="2">
 
+
+<tr>
+	<td colspan="2">
+	<center><font size=4><b>Login</b></font></center>
+	</td>
+
+</tr>
+<tr>
+
+   <td>Username:</td>
+
+   <td><input type="text" name="name" size="20"></td>
+</tr>
+
+<tr>
+
+	<td>Password:</td>
+	
+<td><input type="password" name="password" size="20"><td>
+
+
+  <tr id="butt">
+   
+<td id="bt" colspan="2"><center><input type="reset" ><input type="submit" value="Login" ></center></td>
+
+
+  <!-- <td ></td> -->
+
+  </tr>
+<tr>
+<td colspan="2"><center><a href="registration.html">signup</a></center></td>
+</tr>
+
+
+
+
+</table>
 </form>
 </body>
 </html>
