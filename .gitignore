@@ -40,3 +40,9 @@ Thumbs.db
 .metadata
 .recommenders
 RemoteSystemsTempFiles
+.settings
+.project
+.policy
+.properties
+.classpath
+
