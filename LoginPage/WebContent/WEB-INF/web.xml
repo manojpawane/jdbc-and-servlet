@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>LoginPage</display-name>
-  
   <servlet>
     <servlet-name>RegisterServlet</servlet-name>
     <servlet-class>com.controller.LoginPage.RegistrationUploadData</servlet-class>
@@ -10,9 +9,6 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/registers</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>FirstServlet</servlet-name>
     <servlet-class>com.controller.LoginPage.HelloWorld</servlet-class>
@@ -21,9 +17,6 @@
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>searchservlet</servlet-name>
     <servlet-class>com.controller.LoginPage.Display</servlet-class>
@@ -32,14 +25,21 @@
     <servlet-name>searchservlet</servlet-name>
     <url-pattern>/search</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>deleteaccount</servlet-name>
     <servlet-class>com.controller.LoginPage.DeleteAccount</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>deleteaccount</servlet-name>
     <url-pattern>/accdelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateservlet</servlet-name>
+    <servlet-class>com.controller.LoginPage.Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateservlet</servlet-name>
+    <url-pattern>/accupdate</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
