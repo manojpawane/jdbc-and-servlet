@@ -25,30 +25,31 @@ public class HelloWorld extends HttpServlet {
 		// TODO Auto-generated method stub
 		String uname = request.getParameter("username");
 		String pword = request.getParameter("password");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	//	response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 
-		// Actual logic goes here.
+	System.out.println("pass"+pword);
 		PrintWriter out = response.getWriter();
 
 		try {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/my1stdatabase";
-			Connection connection = (Connection) DriverManager.getConnection(url, "root", "root123");
+			Connection connection = (Connection) DriverManager.getConnection(url,"root","root123");
 
-			// connection.setAutoCommit(false);
-			PreparedStatement ps = connection
-					.prepareStatement("select * from registration where username=? and password=? ");
+		
+			PreparedStatement ps = connection.prepareStatement("select * from registration where username=? and password=?");
 			ps.setString(1, uname);
 			ps.setString(2, pword);
 
+			
 			ResultSet rs = ps.executeQuery();
-			java.sql.ResultSetMetaData rsmd = rs.getMetaData();
+		//	java.sql.ResultSetMetaData rsmd = rs.getMetaData();
 
 			boolean flag = false;
 
-			while (rs.next()) {
+			while (rs.next()) 
+			{
 
 				if (uname.equals(rs.getString(12)) && pword.equals(rs.getString(13))) {
 					response.sendRedirect("view.html");

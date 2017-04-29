@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+	<!-- <script type="text/javascript" src="validate.js"></script> -->
 <style>
 table{
 	margin-top:13%;
@@ -14,7 +15,7 @@ table{
 </head>
 <body bgcolor="green">
 
-<form action="hello" method="post">
+<form action="hello" method="post"><!--   name="login" onsubmit="return deletevalidate()"  -->>
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center" cellspacing="2">
 
 
@@ -28,7 +29,7 @@ table{
 
    <td>Username:</td>
 
-   <td><input type="text" name="username" size="20"></td>
+   <td><input type="text" name="username" size="20" ></td>
 </tr>
 
 <tr>
@@ -40,7 +41,8 @@ table{
 
   <tr id="butt">
    
-<td id="bt" colspan="2"><center><input type="reset" ><input type="submit" value="Login" ></center></td>
+<td id="bt" colspan="2"><center><input type="reset" >
+<input type="submit" value="Login" ></center></td>
 
 
   <!-- <td ></td> -->

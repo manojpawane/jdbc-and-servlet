@@ -1,7 +1,8 @@
-function validate()  
+function validate()
 {  
 	
 
+	console.log("abc");
 
 
 
@@ -117,8 +118,29 @@ if(document.myform.paddress.value.trim() == "")
      document.myform.mobileno.focus() ;
      return false;
    }
-   return( true );
+   return true ;
+   
+};
 
 
+function deletevalidate()
+{
+	
+	if(document.login.username.value.trim() == "")
+	{
+	alert("Please fill the Username");
+	document.myform.uname.focus();
+	return false;
+	
+	}
 
-}  
+if(document.login.password.value.trim() == "")
+	{
+	alert("Please fill password");
+	document.myform.password.focus();
+	return false;
+	}
+	
+return true;
+}
+
