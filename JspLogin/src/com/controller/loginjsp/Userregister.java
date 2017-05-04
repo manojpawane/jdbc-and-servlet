@@ -20,9 +20,9 @@ public class Userregister extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		String txtname = request.getParameter("textnames");
+		String txtname = request.getParameter("name");
 		String email = request.getParameter("email");
-		String mobile = request.getParameter("mob");
+		String mob = request.getParameter("mobile");
 		String pass = request.getParameter("password");
 
 		try {
@@ -36,8 +36,8 @@ public class Userregister extends HttpServlet {
 
 			pstatement.setString(1, txtname);
 			pstatement.setString(2, email);
-			pstatement.setString(3, mobile);
-			pstatement.setString(4, pass);
+			pstatement.setString(3, pass);
+			pstatement.setString(4, mob);
 
 			int i = pstatement.executeUpdate();
 			if (i > 0)

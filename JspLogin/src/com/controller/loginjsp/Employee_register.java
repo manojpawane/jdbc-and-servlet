@@ -20,6 +20,7 @@ public class Employee_register extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");  
 		PrintWriter out = response.getWriter();  
+		request.getRequestDispatcher("view.jsp").include(request, response);
 		          
 		String txtname=request.getParameter("textnames");  
 		String mobi=request.getParameter("mobile");
@@ -35,7 +36,7 @@ public class Employee_register extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");	
 			 String url="jdbc:mysql://localhost:3306/my1stdatabase";
 			Connection connection=(Connection)DriverManager.getConnection(url,"root","root123");
-			String query="insert into user values(?,?,?,?,?,?,?,?)";
+			String query="insert into emp_registration values(?,?,?,?,?,?,?,?)";
 			PreparedStatement pstatement= (PreparedStatement) connection.prepareStatement(query);
 			
 			
@@ -52,7 +53,7 @@ public class Employee_register extends HttpServlet {
 			
 			int i=pstatement.executeUpdate();  
 			if(i>0)  
-			out.print("You are successfully registered...");  
+			out.println("<h1>"+"You are successfully registered..."+"</h1>");  
 			
 			
 		}

@@ -20,17 +20,17 @@ import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/loginServlet")
+@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("username");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uname = request.getParameter("email");
 		String pword = request.getParameter("password");
 		
 		PrintWriter out = response.getWriter();
-		request.getRequestDispatcher("Link.html").include(request, response);
+		//request.getRequestDispatcher("Link.html").include(request, response);
 		 boolean flag=false;
 		
 		try
@@ -39,14 +39,14 @@ public class LoginServlet extends HttpServlet {
 
 			Connection connection = (Connection) DriverManager
 					.getConnection("jdbc:mysql://localhost:3306/my1stdatabase", "root", "root123");
-			PreparedStatement ps = connection.prepareStatement("select * from registration where username=? and password=?");
+			PreparedStatement ps = connection.prepareStatement("select * from user where email=? and password=?");
 			ps.setString(1, uname);
 			ps.setString(2, pword);
 			
 			ResultSet rs=ps.executeQuery();
 			while(rs.next())
 			{
-				if(uname.equals(rs.getString(1)) &&  pword.equals(rs.getString(3)))
+				if(uname.equals(rs.getString(2)) &&  pword.equals(rs.getString(3)))
 				{
 					response.sendRedirect("view.jsp");
 					flag=true;

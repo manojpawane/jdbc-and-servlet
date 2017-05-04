@@ -79,11 +79,11 @@ function validate() {
 		return false;
 	}
 
-	if (document.myform.mobileno.value.trim() == ""
-			|| isNaN(document.myform.mobileno.value)
-			|| document.StudentRegistration.mobileno.value.length != 10) {
+	if (document.myform.mobile.value.trim() == ""
+			|| isNaN(document.myform.mobile.value)
+			|| document.myform.mobile.value.length != 10) {
 		alert("Please provide a Mobile No in the format 123.");
-		document.myform.mobileno.focus();
+		document.myform.mobile.focus();
 		return false;
 	}
 	return true;
