@@ -18,7 +18,6 @@ import com.mysql.jdbc.ResultSetMetaData;
 /**
  * Servlet implementation class Display
  */
-@WebServlet("/Display")
 public class Display extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -47,7 +46,7 @@ public class Display extends HttpServlet {
            
                    
              ResultSet rs=ps.executeQuery();    
-             System.out.println("executed");
+             
              
 
             

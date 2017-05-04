@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,9 +29,10 @@ public class HelloWorld extends HttpServlet {
 	//	response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 
-	System.out.println("pass"+pword);
-		PrintWriter out = response.getWriter();
 
+		PrintWriter out = response.getWriter();
+		request.getRequestDispatcher("Link.html").include(request, response);
+		
 		try {
 
 			Class.forName("com.mysql.jdbc.Driver");
@@ -51,7 +53,10 @@ public class HelloWorld extends HttpServlet {
 			while (rs.next()) 
 			{
 
-				if (uname.equals(rs.getString(12)) && pword.equals(rs.getString(13))) {
+				if (uname.equals(rs.getString(12)) && pword.equals(rs.getString(13))) 
+				{
+					Cookie ck=new Cookie("usrname", uname);
+					response.addCookie(ck);
 					response.sendRedirect("view.html");
 
 					flag = true;
@@ -61,6 +66,7 @@ public class HelloWorld extends HttpServlet {
 			if (!flag) {
 
 				out.print("<center><h1>Please Check your Username or Password</h1></center>");
+				request.getRequestDispatcher("Login.html").include(request, response);
 			}
 
 		} catch (Exception e2)
