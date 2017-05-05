@@ -14,7 +14,7 @@
 
 <tr>
 	<td colspan="2">
-	<center>Enter Name To Deletel</center><input type="text" name="accusername"/><br/>  
+	<center>Enter Name To Delete</center><input type="text" name="accusername"/><br/>  
 	
 	</td>
 	
