@@ -10,7 +10,7 @@
 
 <a href="employee_registration.jsp">ADD EMPLOYEE</a></br>
 <a href="display.jsp">DISPLAY EMPLOYEE</a></br>
-<a href="delete.jsp">DELETE EMPLOYEE</a>
+<a href="Delete_emp.jsp">DELETE EMPLOYEE</a>
 
 </body>
 </html>
